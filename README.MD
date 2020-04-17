@@ -29,9 +29,15 @@ Installation
 To install the plugin simply symlink the source directory into your Totem's
 plugin directory.
 
-This can be for instance: ~/.local/share/totem/plugins/airplay/
+<pre>
+cd ~ && git clone https://github.com/wheelcomplex/totem-plugin-airplay.git
+
+mkdir -p ~/.local/share/totem/plugins/ && ln -s ~/totem-plugin-airplay ~/.local/share/totem/plugins/airplay/
+</pre>
 
 Then restart Totem and activate the plugin. Obviously Totem must be compiled
 with Python support.
 
-python3-avahi for Ubuntu: https://launchpad.net/~yavdr/+archive/ubuntu/experimental-main
+python3-avahi for Ubuntu: 
+--------------------------
+https://launchpad.net/~yavdr/+archive/ubuntu/experimental-main
