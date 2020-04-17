@@ -27,7 +27,7 @@ import threading
 import time
 import uuid
 from datetime import datetime, date
-from urlparse import urlparse
+from urllib.parse import urlparse
 from ZeroconfService import ZeroconfService
 
 __all__ = ["BaseAirPlayRequest", "AirPlayService", "AirPlayProtocolHandler"]
@@ -192,7 +192,7 @@ class AirPlayProtocolHandler(asyncore.dispatcher_with_send):
 			content = content % (self.service.deviceid, self.service.features, self.service.model)
 			answer = self.create_request(200, "Content-Type: text/x-apple-plist+xml", content)
 		else:
-			print "ERROR: AirPlay - Unable to handle request \"%s\"" % (request.uri)
+			print("ERROR: AirPlay - Unable to handle request \"%s\"" % (request.uri))
 			answer = self.create_request(404)
 
 		if(answer is not ""):
@@ -317,7 +317,7 @@ class AirPlayService(asyncore.dispatcher):
 		self.thread.is_finished = False
 		self.thread.start()
 
-		print "AirPlayService running"
+		print("AirPlayService running on tcp 22555")
 
 	def handle_accept(self):
 		pair = self.accept()

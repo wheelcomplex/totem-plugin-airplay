@@ -33,3 +33,5 @@ This can be for instance: ~/.local/share/totem/plugins/airplay/
 
 Then restart Totem and activate the plugin. Obviously Totem must be compiled
 with Python support.
+
+python3-avahi for Ubuntu: https://launchpad.net/~yavdr/+archive/ubuntu/experimental-main

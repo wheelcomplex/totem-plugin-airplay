@@ -50,7 +50,7 @@ class AirPlayPlugin (GObject.GObject, Peas.Activatable):
 		try:
 			self.construct()
 		except:
-			print >> sys.stderr, "Failed activating airplay"
+			print("Failed activating airplay", file=sys.stderr)
 			return
 		
 
@@ -76,7 +76,7 @@ class AirPlayPlugin (GObject.GObject, Peas.Activatable):
 		self.service = None
 
 class AirPlayTotemPlayer(AirPlayService):
-	def __init__(self, totem, name=None, host="0.0.0.0", port=22555):
+	def __init__(self, totem, name=None, host="0.0.0.0", port=5000):
 		self.location = None
 		self.totem = totem
 		AirPlayService.__init__(self, name, host, port)
